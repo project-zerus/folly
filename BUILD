@@ -91,6 +91,7 @@ cc_library(
   visibility = ['//visibility:public'],
   deps = [
     ':base',
+    '//external:libevent',
     '//external:libssl',
   ],
   hdrs = [
