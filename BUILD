@@ -46,10 +46,13 @@ cc_binary(
 
 gen_rule(
   name = 'fingerfrint_tables',
+  srcs = [
+    'folly/build/GenerateFingerprintTables.cpp'
+  ],
   outs = [
     'FingerprintTables.cpp',
   ],
-  cmd = 'blade-bin/folly/generate_fingerprint_tables --install_dir=$BUILD_DIR/folly',
+  cmd = '$BUILD_DIR/folly/generate_fingerprint_tables --install_dir=$BUILD_DIR/folly',
   deps = [
     ':generate_fingerprint_tables',
   ]
